@@ -311,12 +311,12 @@ async function start(){
     await typeWriter(fixScreen,"Rebuilding system files...");
     await typeWriter(fixScreen,"\nRestoring system integrity...");
     await typeWriter(fixScreen,"\nPatch complete ✓");
-    await new Promise(r=>setTimeout(r,1500));
+    await new Promise(r=>setTimeout(r,7000));
     fixScreen.style.display="none";
 
     introScreen.style.display="flex";
     await typeWriter(introScreen,"hi bubby! quick question");
-    await new Promise(r=>setTimeout(r,1000));
+    await new Promise(r=>setTimeout(r,2000));
     introScreen.style.display="none";
 
     ui.style.display="flex";
