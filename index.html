@@ -244,6 +244,7 @@ h1 { font-size: 12px; line-height: 1.8; }
 </div>
 
 <div id="sus-screen" class="screen sage" style="display:none;"></div>
+<div id="baho-screen" class="screen sage" style="display:none;"></div>
 <div id="fine-screen" class="screen sage" style="display:none;"></div>
 <div id="chase-screen" class="screen sage" style="display:none; position:relative;"></div>
 
@@ -253,7 +254,7 @@ h1 { font-size: 12px; line-height: 1.8; }
     <div class="letter-box">
         <h2>HAPPY VALENTINES DAY! </h2>
         <p>
-        hai bubby i hope u like dis smol sorprayz and i hope this made u feel extra loved todei since it's valentines. my ultimate sayen wish is sana magkasama na tayo soon T_T. but eon im still glad we get to celebrate valentines this year as gfs!! funny ahh lang last yr may pa swap pa tayo ng retlet na nalalaman HAHSDHJASH. anyway that's all. i lob u agen hindi lang bc it's valentines i lob u everyday <3
+        hai bubby i hope u like dis smol sorprayz and i hope this made u feel extra loved todei since it's valentines. my ultimate sayen wish is sana magkasama na tayo soon T_T. but eon im still glad we get to celebrate valentines this year as gfs!! funny ahh lang naalala ko last yr may pa swap pa tayo ng retlet na nalalaman HAHSDHJASH. anyway that's all. i lob u! hindi lang bc it's valentines but i lob u everyday <3
         </p>
         <button class="restart-btn" id="restartBtn">RESTART</button>
     </div>
@@ -269,6 +270,7 @@ const btnWrapper = document.getElementById("btn-wrapper");
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 const susScreen = document.getElementById("sus-screen");
+const bahoScreen = document.getElementById("baho-screen");
 const fineScreen = document.getElementById("fine-screen");
 const chaseScreen = document.getElementById("chase-screen");
 const finalScreen = document.getElementById("final-screen");
@@ -313,12 +315,12 @@ async function start(){
     fixScreen.style.display="none";
 
     introScreen.style.display="flex";
-    await typeWriter(introScreen,"hi bubby! what r u doing here?");
+    await typeWriter(introScreen,"hi bubby! quick question");
     await new Promise(r=>setTimeout(r,1000));
     introScreen.style.display="none";
 
     ui.style.display="flex";
-    await typeWriter(mainText,"anyway i was wondering if i could be ur valentines date today... can i?");
+    await typeWriter(mainText,"can i be your valentines date today?");
     btnWrapper.style.visibility="visible";
 }
 
@@ -350,9 +352,14 @@ leftBtn.onclick=async()=>{
     ui.style.display="none";
 
     susScreen.style.display="flex";
-    await typeWriter(susScreen,"sus !! baka napilitan ka lang...");
+    await typeWriter(susScreen,"sus...baka napilitan ka lang...");
     await new Promise(r=>setTimeout(r,8000));
     susScreen.style.display="none";
+
+    bahoScreen.style.display="flex";
+    await typeWriter(bahoScreen,"baho mo");
+    await new Promise(r=>setTimeout(r,8000));
+    bahoScreen.style.display="none";
 
     fineScreen.innerHTML="";
     fineScreen.style.display="flex";
